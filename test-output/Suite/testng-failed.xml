@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="testng.ListnerTest"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="testng.Demo1">
+        <methods>
+          <include name="testcaseFail"/>
+        </methods>
+      </class> <!-- testng.Demo1 -->
+      <class name="testng.CaptureScreenshot">
+        <methods>
+          <include name="setup"/>
+          <include name="testFail"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testng.CaptureScreenshot -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
